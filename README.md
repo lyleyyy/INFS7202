@@ -1,54 +1,54 @@
-# CodeIgniter 4 Framework
+# Learning Platform
 
-## What is CodeIgniter?
+A simple web-based learning platform built using **PHP** and **CodeIgniter 4**, with basic user authentication, discussion forum, personal notes, and profile management features.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Notes
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+This project was developed as part of the **INFS7202 Information Systems Architecture** course assignment at The University of Queensland.  
+It is a learning platform prototype built for educational purposes.  
+For demonstration purposes only; security and production hardening are not fully implemented.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Features
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- User Authentication
 
-## Important Change with index.php
+  - Login / Logout
+  - Cookie-based session management
+  - (Optional) Google OAuth support
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- User Dashboard
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+  - View personal profile
+  - Upload profile image
 
-**Please** read the user guide for a better explanation of how CI4 works!
+- Discussion Forum
 
-## Repository Management
+  - View all questions
+  - Post new questions
+  - Comment on existing questions
+  - User-specific favorites / bookmarks
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+- Personal Notes
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+  - Create and manage personal learning notes
 
-## Contributing
+- Donation Page
+  - Static donation information page
 
-We welcome contributions from the community.
+## Tech Stack
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+- Backend: PHP 8.x, CodeIgniter 4
+- Frontend: HTML, CSS, basic Bootstrap (if used)
+- Database: MySQL (assumed, based on CI usage)
+- Others: Composer, Google OAuth (optional)
 
-## Server Requirements
+## Setup Instructions
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+1. Clone this repository
+2. Configure your `.env` file with database settings
+3. Run database migrations (if any)
+4. Serve the project using built-in PHP server or your preferred web server
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+```bash
+php spark serve
+```

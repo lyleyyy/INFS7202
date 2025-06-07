@@ -1,0 +1,32 @@
+# Composer vendor directory
+/vendor/
+
+# Environment config
+.env
+
+# CI4 writable directory (runtime files)
+writable/*
+!writable/.gitkeep
+
+# Cache and logs
+writable/cache/
+writable/debugbar/
+writable/logs/
+writable/session/
+writable/uploads/
+
+# PHPStorm / VSCode / IDE
+.idea/
+.vscode/
+
+# System generated files
+*.log
+*.cache
+
+# PHPUnit test runtime data
+/tests/database/*
+/tests/session/*
+
+# OS generated files
+.DS_Store
+Thumbs.db
